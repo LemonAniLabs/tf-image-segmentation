@@ -110,13 +110,14 @@ def resnet_v1_101_8s(image_batch_tensor,
                                                 number_of_classes,
                                                 is_training=is_training,
                                                 global_pool=False,
+                                                spatial_squeeze=False,
                                                 output_stride=8)
         
 
         downsampled_logits_shape = tf.shape(logits)
 
         # Calculate the ouput size of the upsampled tensor
-        upsampled_logits_shape = tf.pack([
+        upsampled_logits_shape = tf.stack([
                                           downsampled_logits_shape[0],
                                           downsampled_logits_shape[1] * upsample_factor,
                                           downsampled_logits_shape[2] * upsample_factor,
