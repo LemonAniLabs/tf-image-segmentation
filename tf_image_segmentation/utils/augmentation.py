@@ -84,8 +84,8 @@ def distort_randomly_image_color(image_tensor, fast_mode=False):
 def scale_randomly_image_with_annotation_with_fixed_size_output(img_tensor,
                                                                 annotation_tensor,
                                                                 output_shape,
-                                                                min_relative_random_scale_change=0.9,
-                                                                max_realtive_random_scale_change=1.1,
+                                                                min_relative_random_scale_change=1.0,
+                                                                max_realtive_random_scale_change=1.0,
                                                                 mask_out_number=255):
     """Returns tensor of a size (output_shape, output_shape, depth) and (output_shape, output_shape, 1).
     The function returns tensor that is of a size (output_shape, output_shape, depth)

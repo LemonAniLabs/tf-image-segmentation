@@ -22,9 +22,9 @@ val_img_label = image_names(cityscape_root, 'val')
 # You can create your own tfrecords file by providing
 # your list with (image, annotation) filename pairs here
 write_image_annotation_pairs_to_tfrecord(filename_pairs=train_img_label,
-                                         tfrecords_filename='cityscape_trainid_train.tfrecords')
+                                         tfrecords_filename='cityscape_trainid4_train.tfrecords')
 
 write_image_annotation_pairs_to_tfrecord(filename_pairs=val_img_label,
-                                         tfrecords_filename='cityscape_trainid_val.tfrecords')
+                                         tfrecords_filename='cityscape_trainid4_val.tfrecords')
 
 print('Finish')
